@@ -2,26 +2,30 @@ Routing Algorithms
 ================
 
 These are Linkstate(Dijkstra) and Distance Vector(Bellman-Ford) implementation in C++.  
-To compile:
+How to get:
+-------------
 
+    git clone https://github.com/rhuangab/routingAlgorithm.git
     Make
   
-To run:
-  * run the Link State Algorithm:
-  
-        sh runLinkstate.sh
+How to run:
+----------
         
-  * run the Distance Vector Algorithm
+  * Run the Distance Vector Algorithm by file io:
   
         sh runDistvect.sh
-        
-  * run both two and compare the two results. 
-        
-        sh runBoth.sh 
+
+    Or get input output from/onto console by adding the `-stdio` option, using std::cout and std::cin:
+
+        sh runDistvect.sh -stdio
+
+  * Run the Link State Algorithm:
+  
+        sh runLinkstate.sh
 
 The output of these two algorithms are available in (by default setting): 
   
     outputLinkstate.txt
-    outputDistvect.txt
+    distvec_output.txt
     
     
