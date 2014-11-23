@@ -10,22 +10,44 @@ How to get:
   
 How to run:
 ----------
-        
-  * Run the Distance Vector Algorithm by file io:
-  
-        sh runDistvect.sh
+Run by using std io:
 
-    Or get input output from/onto console by adding the `-stdio` option, using std::cout and std::cin:
+    ./routingAlgor -stdio
+    
+Run by using file io:
 
-        sh runDistvect.sh -stdio
-
-  * Run the Link State Algorithm:
-  
-        sh runLinkstate.sh
-
+    ./routingAlgor <topofile> <messagefile> <changesfile>
+    
 The output of these two algorithms are available in (by default setting): 
-  
+      
     outputLinkstate.txt
     distvec_output.txt
+    
+File format:
+-----------
+There are 3 sample file provided: `topology.txt` `messages.txt` `changes.txt`  
+######topology.txt
+Each line representing an edge: <node 1> <node 2> <distance>
+```
+1 2 8
+2 3 3
+2 5 4
+4 1 1
+4 5 1
+```
+######messages.txt
+Each line represneting a message: <from> <to> <message content>
+```
+2 1 here is a message from 2 to 1
+3 5 this one gets sent from 3 to 5!
+```
+######changes.txt
+Each line representing a change to an edge: <node 1> <node 2> <distance>  
+```
+2 4 1
+2 4 -999
+```
+Note that negative distance means the edge is broken, because in undirected graph, a negative cost edge mean negative cycle.  
+
     
     
