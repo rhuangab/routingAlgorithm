@@ -323,6 +323,19 @@ int main(int argc, char *argv[])
  		}
 
  		printAllForwardTable(forwardTable, of);
+
+ 		/** Start exchange messages **/
+	 	ifstream imsgstr;
+	 	imsgstr.open(argv[2]);
+	 	while(imsgstr.good()){
+	 		int from, to;
+	 		char msg[256];
+	 		imsgstr >> from >> to >> msg[0]; //the last one is to get rid of heading spaces.
+	 		imsgstr.getline(msg+1, 256);
+	 		sendMsg(forwardTable, from, to, msg, of);
+	 	}
+	 	imsgstr.close();
+ 		
  	}
  	ichange.close();
  	cout <<"end"<<endl;
