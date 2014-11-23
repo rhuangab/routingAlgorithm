@@ -35,6 +35,7 @@ Each line representing an edge: <node 1> <node 2> <distance>
 4 1 1
 4 5 1
 ```
+![Sample_graph](sample_graph.png)
 ######messages.txt
 Each line represneting a message: <from> <to> <message content>
 ```
