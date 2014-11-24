@@ -20,7 +20,7 @@ Run by using file io:
     
 The output of these two algorithms are available in (by default setting): 
       
-    outputLinkstate.txt
+    linkstate_output.txt
     distvec_output.txt
     
 File format:
