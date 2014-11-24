@@ -129,7 +129,7 @@ void run(ostream& out, char* argv[], int choice)
 
 int main(int argc, char* argv[]){
 	if(!(argc == 2 && strcmp(argv[1],"stdio") == 0) && argc != 4){
-		printf("Usage: ./routingAlgor stdio or ./distvec <topofile> <messagefile> <changesfile>.\n");
+		printf("Usage: ./routingAlgor stdio or ./routingAlgor <topofile> <messagefile> <changesfile>.\n");
 		exit(0);
 	}
 	
